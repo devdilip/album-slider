@@ -14,25 +14,24 @@ const setHeaders = (urlEncodedForm) => {
     return additionalHeaders;
 };
 
+const setOptions = (method, baseURL, url) => {
+    const options = {};
+    options['method'] = method;
+    options['baseURL'] = baseURL;
+    options['url'] = url;
+    return options;
+}
 
 export const getDataOptions = (url) => {
-    const options = {
-        method: 'get',
-        baseURL: BASE_URL,
-        url: url,
-        headers: setHeaders(false)
-    }
+    const options = setOptions('get', BASE_URL, url);
+    options['headers'] = setHeaders(false);
     return options;
 };
 
 export const postDataOptions = (url, data) => {
-    const options = {
-        method: "post",
-        baseURL: BASE_URL,
-        url: url,
-        data: data,
-        headers: setHeaders(false)
-    }
+    const options = setOptions('post', BASE_URL, url);
+    options['data'] = data;
+    options['headers'] = setHeaders(false);
     return options;
 };
 
