@@ -37,3 +37,8 @@ You will also see any lint errors in the console.
 		"thumbnailUrl": "https://via.placeholder.com/150/92c952"
 	}
 ]
+```
+
+## Output 
+
+![Screen Image](src\Assets\Images\application_image.PNG)
