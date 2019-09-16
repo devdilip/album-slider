@@ -37,3 +37,19 @@ export const getDataOptions = (url) => {
     }
     return options;
 };
+
+export const postDataOptions = (url, data) => {
+    const options = {
+        method: "post",
+        baseURL: BASE_URL,
+        url: url,
+        data: data,
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'Cache-Control': "no-cache",
+            Pragma: "no-cache"
+        }
+    }
+    return options;
+};
