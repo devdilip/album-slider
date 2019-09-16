@@ -1,6 +1,6 @@
 import React, { Component, Suspense } from "react";
 import { updateAlbumDataService } from "../../Services/ApplicationService";
-const ImageSlider = React.lazy(() => import('./../ImageSlider/index'));
+const ImageSlider = React.lazy(() => import('./../ImageSlider'));
 
 export default class AlbumRow extends Component {
   state = {

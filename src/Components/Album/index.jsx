@@ -2,7 +2,7 @@ import React, { Component, Suspense } from "react";
 import "./Album.css";
 import { getAllAlbumDetailsService } from "../../Services/ApplicationService";
 
-const AlbumRow = React.lazy(() => import('./../AlbumRow/index'));
+const AlbumRow = React.lazy(() => import('./../AlbumRow'));
 
 export default class componentName extends Component {
   state = {
