@@ -13,7 +13,6 @@ export default class AlbumRow extends Component {
 
   updateAlbumData = async () => {
     await updateAlbumDataService(this.props.data.id).then(response => {
-      // console.log(response);
       this.setState({ imageList: response });
     }).catch(error => {
       console.log(error);

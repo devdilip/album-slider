@@ -14,7 +14,6 @@ export default class componentName extends Component {
 
   GetAllAlbumDetails = async () => {
     await getAllAlbumDetailsService().then(response => {
-      // console.log(response);
       this.setState({ albumList: response });
     }).catch(error => {
       console.log(error);

@@ -6,11 +6,11 @@ import InfiniteCarousel from 'react-leaf-carousel';
 class ImageSlider extends Component {
 
     render() {
-        const image_list_for_lazy = this.props.imageList.map((data, i) => {
+        const imageListForRendering = this.props.imageList.map((data, i) => {
             return (
                 <div className='image-style' key={i}>
                     <img src={data.url} alt={data.title} height="142" width="142" ></img>
-                    <label htmlFor="">{data.title.substring(0, 35) + '...'}</label>
+                    <label htmlFor="">{data.title.substring(0,20) + '...'}</label>
                     <p className='image-id' htmlFor="">{`Id: ${data.id}`}</p>
                 </div>
             );
@@ -39,10 +39,10 @@ class ImageSlider extends Component {
                     sidesOpacity={.5}
                     sideSize={.1}
                     slidesToScroll={4}
-                    slidesToShow={4}
+                    slidesToShow={6}
                     scrollOnDevice={true}
                 >
-                    {image_list_for_lazy}
+                    {imageListForRendering}
                 </InfiniteCarousel>
             </div>
         )
