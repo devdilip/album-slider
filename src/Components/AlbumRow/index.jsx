@@ -7,7 +7,7 @@ export default class AlbumRow extends Component {
     imageList: []
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.updateAlbumData();
   }
 

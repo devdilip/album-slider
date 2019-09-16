@@ -8,7 +8,7 @@ export default class componentName extends Component {
   state = {
     albumList: []
   };
-  componentWillMount() {
+  componentDidMount() {
     this.GetAllAlbumDetails()
   }
 
