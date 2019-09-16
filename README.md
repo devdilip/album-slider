@@ -41,4 +41,4 @@ You will also see any lint errors in the console.
 
 ## Output 
 
-![Screen Image](src\Assets\Images\application_image.PNG)
+![Screen Image](https://github.com/devdilip/album-slider/blob/master/src/Assets/Images/application_image.PNG)
