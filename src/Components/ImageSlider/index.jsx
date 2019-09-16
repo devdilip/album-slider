@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
 import './ImageSlider.css';
 
 import InfiniteCarousel from 'react-leaf-carousel';
