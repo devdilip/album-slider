@@ -1,6 +1,6 @@
 import axios from 'axios';
+import { getDataOptions } from './BackendServices';
 
-const BASE_URL = 'https://jsonplaceholder.typicode.com/';
 const EACH_ALBUM_DETEILS_URL = 'photos?albumId=';
 const ALL_ALBUM_DETAILS_URL = 'albums';
 
@@ -23,33 +23,4 @@ export const updateAlbumDataService = async (id) => {
     } catch (error) {
         return Promise.reject(error);
     }
-};
-
-export const getDataOptions = (url) => {
-    const options = {
-        method: 'get',
-        baseURL: BASE_URL,
-        url: url,
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-        }
-    }
-    return options;
-};
-
-export const postDataOptions = (url, data) => {
-    const options = {
-        method: "post",
-        baseURL: BASE_URL,
-        url: url,
-        data: data,
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-            'Cache-Control': "no-cache",
-            Pragma: "no-cache"
-        }
-    }
-    return options;
 };
