@@ -28,10 +28,21 @@ export const getDataOptions = (url) => {
     return options;
 };
 
-export const postDataOptions = (url, data) => {
+export const postDataOptions = (url, data = null, urlEncoded = false) => {
     const options = setOptions('post', BASE_URL, url);
-    options['data'] = data;
-    options['headers'] = setHeaders(false);
+    if (data) {
+        options['data'] = data;
+    }
+    options['headers'] = setHeaders(urlEncoded);
+    return options;
+};
+
+export const putDataOptions = (url, data = null, urlEncoded = false) => {
+    const options = setOptions('put', BASE_URL, url);
+    if (data) {
+        options['data'] = data;
+    }
+    options['headers'] = setHeaders(urlEncoded);
     return options;
 };
 
