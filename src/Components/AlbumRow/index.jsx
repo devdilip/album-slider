@@ -1,6 +1,7 @@
-import React, { Component, Suspense } from "react";
+import React, { Component } from "react";
+import LazyLoad from 'react-lazyload';
+import ImageSlider from './../ImageSlider';
 import { updateAlbumDataService } from "../../Services/ApplicationService";
-const ImageSlider = React.lazy(() => import('./../ImageSlider'));
 
 export default class AlbumRow extends Component {
   state = {
@@ -22,7 +23,7 @@ export default class AlbumRow extends Component {
   render() {
     let { data } = this.props;
     return (
-      <Suspense fallback={<div> Loading... </div>}>
+      <LazyLoad height={200} >
         <div className="card m-2">
           {this.state.imageList.length !== 0 ?
             <div>
@@ -33,7 +34,7 @@ export default class AlbumRow extends Component {
               < ImageSlider imageList={this.state.imageList} />
             </div> : null}
         </div>
-      </Suspense>
+      </LazyLoad>
     );
   }
 }

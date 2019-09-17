@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './ImageSlider.css';
 
 import InfiniteCarousel from 'react-leaf-carousel';
+import LazyLoad from 'react-lazyload';
+
 
 class ImageSlider extends Component {
 
@@ -9,8 +11,10 @@ class ImageSlider extends Component {
         const imageListForRendering = this.props.imageList.map((data, i) => {
             return (
                 <div className='image-style' key={i}>
-                    <img src={data.url} alt={data.title} height="142" width="142" ></img>
-                    <label htmlFor="">{data.title.substring(0,20) + '...'}</label>
+                    <LazyLoad height={200} >
+                        <img src={data.url} alt={data.title} height="142" width="142" ></img>
+                    </LazyLoad>
+                    <label htmlFor="">{data.title.substring(0, 20) + '...'}</label>
                     <p className='image-id' htmlFor="">{`Id: ${data.id}`}</p>
                 </div>
             );
