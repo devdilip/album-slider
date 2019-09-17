@@ -6,7 +6,7 @@
     "axios": "0.19.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
-    "react-lazyload": "^2.6.2",
+    "react-lazyload": "2.6.2",
     "react-leaf-carousel": "1.2.2",
     "react-scripts": "3.1.1"
   },
