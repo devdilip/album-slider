@@ -13,9 +13,9 @@ class ImageSlider extends Component {
                 <div className='image-style' key={i}>
                     <LazyLoad height={200} >
                         <img src={data.url} alt={data.title} height="142" width="142" ></img>
+                        <label htmlFor="">{data.title.substring(0, 20) + '...'}</label>
+                        <p className='image-id' htmlFor="">{`Id: ${data.id}`}</p>
                     </LazyLoad>
-                    <label htmlFor="">{data.title.substring(0, 20) + '...'}</label>
-                    <p className='image-id' htmlFor="">{`Id: ${data.id}`}</p>
                 </div>
             );
         });
